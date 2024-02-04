@@ -19,11 +19,13 @@ class ToDoList extends StatelessWidget{
     return ListView.builder(
       itemCount: todolist.length,
       itemBuilder: (ctx,index) => 
-       Dismissible(
-        key: ValueKey(todolist[index]), 
-        onDismissed: (direction) => {onRemoveToDo(todolist[index])},
-        child: ToDoItem(todo: todolist[index],)
-        )
+      ToDoItem(todo: todolist[index], deleteFunction: (context)=>onRemoveToDo(todolist[index]))
+
+      //  Dismissible(
+      //   key: ValueKey(todolist[index]), 
+      //   onDismissed: (direction) => {onRemoveToDo(todolist[index])},
+      //   child: ToDoItem(todo: todolist[index],)
+        
       );
     
    

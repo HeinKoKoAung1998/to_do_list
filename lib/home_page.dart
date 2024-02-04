@@ -28,7 +28,9 @@ class _HomePageState extends State<HomePage>{
 
   void _openAddToDoVoerlay(){
     showModalBottomSheet(
-      backgroundColor: Color(0xffFF9BD2),
+      // barrierColor: Colors.white,
+      backgroundColor: const Color(0xffF8F4EC),
+      
       isScrollControlled: true,
       context: context,
       builder: ((context) => NewToDo(onAddToDo: _addToDo)

@@ -5,14 +5,14 @@ import 'package:uuid/uuid.dart';
 const uuid = Uuid();
 final formatter = DateFormat.yMd();
 
-enum Category { work, entertainment, sports, workout, study,shopping,travel}
+enum Category { work, entertainment, sports, study,shopping,travel}
 
 const categoryIcons = {
   Category.entertainment : Icons.music_video_outlined,
   Category.shopping : Icons.shop_2_outlined,
   Category.sports : Icons.sports_soccer_outlined,
   Category.work : Icons.work_outline,
-  Category.study : Icons.read_more,
+  Category.study : Icons.library_books_outlined,
   // Category.workout : Icons.sports_gymnastics_outlined,
   Category.travel : Icons.flight_takeoff_outlined
 };

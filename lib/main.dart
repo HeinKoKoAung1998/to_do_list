@@ -4,7 +4,7 @@ import 'package:my_to_do_list/home_page.dart';
 
 void main(){
   runApp(MaterialApp(
-    
+    debugShowCheckedModeBanner: false,
     theme: ThemeData(useMaterial3: true),
     home: const HomePage()
   ));

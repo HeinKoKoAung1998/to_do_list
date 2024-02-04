@@ -77,16 +77,24 @@ class _NewToDoState extends State<NewToDo>{
     
     return Padding(
       
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 20,
         vertical: 80
       ),
       child: Column(children: [TextField(
+        
+       
         keyboardType: TextInputType.text,
         controller: _titleController,
         maxLength: 15,
         textAlign: TextAlign.center,
-        decoration: InputDecoration(labelText: "Add Your ToDo List",
+        decoration:  InputDecoration(
+          labelStyle: GoogleFonts.kanit(
+            
+          ),
+          // iconColor: Colors.white,
+          labelText: "Add Your ToDo List",
+          
         )
       ),
        Row(children: [
@@ -105,7 +113,7 @@ class _NewToDoState extends State<NewToDo>{
                         value: category,
                         child: 
                       Text(category.name.toUpperCase(),
-                         style: GoogleFonts.ubuntu(color: Color(0xff402B3A)),
+                         style: GoogleFonts.kanit(color: Color(0xff402B3A)),
                         //  selectionColor: Color(0xffF8F4EC),
                       ))).toList(), 
               onChanged: (value){
@@ -132,7 +140,7 @@ class _NewToDoState extends State<NewToDo>{
          Row(children: [
         ElevatedButton(
           style: ElevatedButton.styleFrom(
-            padding: EdgeInsets.symmetric(horizontal: 35),
+            padding: const EdgeInsets.symmetric(horizontal: 35),
             backgroundColor: const Color(0xffD63484),
             foregroundColor: const Color(0xffF8F4EC)
             ),
@@ -144,7 +152,7 @@ class _NewToDoState extends State<NewToDo>{
           ElevatedButton(
             onPressed: (){Navigator.pop(context);},
             child:  Text('Cancel',
-            style: GoogleFonts.orbitron(),))
+            style: GoogleFonts.orbitron(fontWeight: FontWeight.bold),))
       ],)
       
       ],) 
